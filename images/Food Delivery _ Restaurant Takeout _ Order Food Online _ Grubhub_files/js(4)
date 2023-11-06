@@ -1,0 +1,197 @@
+(function() {
+try {
+    try {
+    if (typeof MtVoid === 'undefined') {
+	var MtVoid = {
+            loc_data : {},
+            scr_data : {
+  "industry":"Internet%2520Services",
+  "mt_pqc":"mt_aid",
+  "mt_gfp":"mt_fp_mt_aid",
+  "event_type":"catchall",
+  "language":"en-US%2Cen%3Bq%3D0.9",
+  "previous_url":"https%253A%252F%252Fwww.google.com%252F",
+  "mt_pp":"2",
+  "mt_cb":"1699207878566",
+  "mt_id":"1427886",
+  "document_path":"%2F",
+  "version":"1.1",
+  "mt_adid":"227305",
+  "document_title":"Food%20Delivery%20%7C%20Restaurant%20Takeout%20%7C%20Order%20Food%20Online%20%7C%20Grubhub",
+  "mt_lim":"20",
+  "mt_fpa":"1",
+  "location":"https%3A%2F%2Fwww.grubhub.com%2F",
+  "delimiter":"%252C"
+},
+            acq_data : {},
+            get: function(obj_name, var_name) {
+		return this[obj_name][var_name];
+	    },
+            set: function(obj_name, var_name, value) {
+		this[obj_name][var_name] = value;
+		return value;
+	    },
+
+            parse_qry: function(qs, destination) {
+		qs.replace(/[?&]([^=]+)=([^&]*)/g, function(all, key, value) {
+		    destination[key]= value;
+		});
+            },
+
+            makeqs : function() {
+		var qs = "";
+		var keys = [].concat.call(arguments);
+		if (keys.length < 2) {
+		    keys = Object.keys(this.acq_data);
+		}
+		var pairs = [];
+		var self = this;
+		keys.forEach(function(key) {
+		    pairs.push(key+'='+encodeURIComponent(self.acq_data[key]));
+		});
+		return pairs.join("&");
+	    },
+
+	    gcook: function(name) {
+		if (document.cookie == null)
+		    return null;
+		const fetch_cookie = RegExp(name+"=([^;]+)");
+		if (fetch_cookie == null)
+                    return null;
+		const values = document.cookie.match(fetch_cookie);
+		if (values == null)
+		    return null;
+		this.set('acq_data', name, values[1]);
+		var abbrev = name.replace(/mt_fp_/g, '');
+		this.set('acq_data', abbrev, values[1]);
+		return values[1];
+	    },
+
+ 	    scook: function(name, value, expire_secs) {
+        	var date = new Date();
+		date.setTime(date.getTime() + expire_secs);
+       		var expire = date.toUTCString();
+		var domain = window.location.hostname.match("[^.]+\.[^.]+$")[0];
+       		var cookie_str = name+'='+value +
+		    '; domain='+domain +
+                    '; expires='+expire +
+                    '; path=/; Secure; SameSite=None';
+		document.cookie = cookie_str;
+		return document.cookie;
+	    }
+	}
+
+	MtVoid.parse_qry(window.location.search, MtVoid.loc_data);
+	MtVoid.set('acq_data', 'primary-x-request-id', "ff736370c97729f0084dcdcd6b982da9");
+	MtVoid.set('acq_data', 'mt_sec', 'kv');
+
+	var mt_fp_uuid = MtVoid.gcook("mt_fp_uuid")
+	if (mt_fp_uuid == null) {
+            if (MtVoid.get('scr_data', 'mt_sfp') != null) {
+		MtVoid.scook('mt_fp_uuid', "72f56547-db19-4c00-92e8-dd3205332357", 396*24*60*60*1000);
+            }
+	}
+
+        if (MtVoid.get('scr_data', 'mt_fpa') != null) {
+	    var mt_aid = MtVoid.get("loc_data", "mt_aid");
+	    if (mt_aid != null) {
+		MtVoid.scook('mt_fp_mt_aid', mt_aid, 30*60*60*24*1000);
+            }
+	}
+
+	var mt_pqc = MtVoid.get('scr_data', 'mt_pqc');
+	if (mt_pqc != null) {
+            var pqc = mt_pqc.split(/[:,|]/);
+	    pqc.forEach(function(key) {
+		if (MtVoid.get('loc_data', key) != null)
+    		    MtVoid.set('acq_data', key, MtVoid.get('loc_data', key));
+	    })
+	}
+
+	var mt_gfp = MtVoid.get('scr_data', 'mt_gfp');
+	if (mt_gfp != null) {
+	    var gfp = mt_gfp.split(/[:,|]/);
+	    gfp.forEach(function(key) {
+    		MtVoid.gcook(key)
+	    })
+	}
+    }
+}
+catch(ex) {
+    new Image().src = "//pixel.mathtag.com/error/img?error_domain=jskvstore&what=" + encodeURIComponent(ex.message);
+}
+if (typeof window.MtBts === 'undefined') {
+    window.MtBts = function() {
+	metric = function(url, wait)
+	{	
+            setTimeout(function() {
+                var e = new Image();
+                e.src = url;
+            }, wait);
+	}
+	var intervals = [0, 10];
+	var inlen = intervals.length;
+	for (var k = 0; k < inlen; ++k)
+            this.metric("https://pixel.mathtag.com/comp/img?mt_id=99&ns=xx&bcdv="+k, intervals[k] * 1000);
+    };
+    window.MtBts()
+}
+       (function() {
+	   try {
+ 	       var stat = '';
+
+               var mt_aid = MtVoid.get('acq_data', 'mt_aid');
+               var mt_fp_mt_aid = MtVoid.get('acq_data', 'mt_fp_mt_aid');
+
+               if (!(mt_aid || mt_fp_mt_aid)) {
+		   return
+	       }
+
+               if (MtVoid.get('loc_data', 'mt_aid'))
+		   stat += 'p2_landing_page,';
+               if (mt_aid)
+ 		   stat += 'p2_mt_aid,';
+  	       if (mt_fp_mt_aid)
+                  stat += 'p2_mt_fp_mt_aid,';
+               stat += "immediate";
+
+       	       var refire = 'https://pixel.mathtag.com/event/img?mt_pp=2&industry=Internet%2520Services&mt_pqc=mt_aid&event_type=catchall&mt_adid=227305&language=en-US%2Cen%3Bq%3D0.9&mt_lim=20&delimiter=%252C&mt_id=1427886&version=1.1&mt_fpa=1&previous_url=https%253A%252F%252Fwww.google.com%252F&document_title=Food%20Delivery%20%7C%20Restaurant%20Takeout%20%7C%20Order%20Food%20Online%20%7C%20Grubhub&location=https%3A%2F%2Fwww.grubhub.com%2F&document_path=%2F&mt_cb=1699207878566&stat='+stat+'&primary_mt_timestamp=1699207961&'+MtVoid.makeqs();
+               new Image().src= refire;
+	   } catch(ex) {
+	       new Image().src="//%s/error/img?error_domain=immediate&what="+encodeURIComponent(ex.message);
+	   }
+       }
+       )();
+(function(){
+/**/
+
+})();
+(function() {
+    try {
+        if (document.getElementById('mm_sync_back_ground'))
+           return;
+        var frm = document.createElement('iframe');
+        frm.style.visibility = 'hidden';
+        frm.style.display = 'none';
+        frm.src = "https://pixel.mathtag.com/sync/iframe?mt_uuid=72f56547-db19-4c00-92e8-dd3205332357&no_iframe=1&mt_adid=227305&mt_lim=20&source=mathtag";
+        frm.setAttribute("id", "mm_sync_back_ground");
+        frm.title="MediaMath Advertising";
+
+        if (document.body)
+            document.body.appendChild(frm);
+        else
+            if (document.head)
+                document.head.appendChild(frm);
+    }
+    catch(ex)
+    {
+        new Image().src="//pixel.mathtag.com/error/img?error_domain=synciframe&what="+encodeURIComponent(ex.message);
+    }
+})();
+
+}
+catch(ex)
+{
+   new Image().src="//pixel.mathtag.com/error/img?error_domain=wrap_js&what="+encodeURIComponent(ex.message);
+}
+})();
