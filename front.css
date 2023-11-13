@@ -7,10 +7,6 @@
     font-family: sans-serif;
 }
 
-body {
-    /* font-family: Arial, sans-serif; */
-}
-
 .container {
     display: flex;
     align-items: center;
@@ -45,7 +41,7 @@ nav {
 
 img {
     max-width: 100%;
-    height: 695px;
+    height: 730px;
     display: block;
 }
 
@@ -242,7 +238,7 @@ section{
     display: flex;
     padding-left: 190px;
     padding-right: 190px;
-    text-align: center;
+    /* text-align: center; */
     margin: 20px;
 }
 
@@ -272,13 +268,13 @@ section{
     
 }
 
-section h2{
+section .owner{
     width: 50%;
     margin-top: 20px;
     text-align: center;
 }
 
-section p{
+section .paragraph2{
     width: 50%;
 }
 
