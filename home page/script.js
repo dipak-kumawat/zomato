@@ -1,4 +1,10 @@
 
+var overlayloader = document.getElementById("loader");
+window.addEventListener("load", function(){
+  overlayloader.style.display = "none";
+})
+
+
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
 
@@ -60,3 +66,65 @@ var swiper = new Swiper(".home-slider", {
     }
 
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
