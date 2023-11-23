@@ -569,11 +569,15 @@ header .icons #menu-bars{
     color: var(--green);
 }
 
+/*  loader */
 
-
-
-
-
+#loader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff url("images/loader.gif") no-repeat center center;
+    z-index: 10000;
+}
 
 
 
