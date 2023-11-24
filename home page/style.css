@@ -266,8 +266,10 @@ header .icons #menu-bars{
 }
 
 .dishes .box-container .box img{
-    height: 17rem;
-    margin: 1rem 0;
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
 }
 
 .dishes .box-container .box h3 {
