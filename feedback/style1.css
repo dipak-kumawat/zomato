@@ -90,7 +90,7 @@ form button{
 form input:focus,
 form textarea:focus{
 	border:1px solid #000ff0;
-	color:#000ff0;
+	color:white;
 	transition:all 0.3s ease;
 }
 

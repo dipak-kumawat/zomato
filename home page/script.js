@@ -1,8 +1,13 @@
 
 var overlayloader = document.getElementById("loader");
-window.addEventListener("load", function(){
-  overlayloader.style.display = "none";
-})
+const overlayLoader = document.getElementById("loader");
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    overlayLoader.style.display = "none";
+  }, 2000); // Hides the loader after 4 seconds (4000 milliseconds)
+});
+
 
 
 let menu = document.querySelector('#menu-bars');
