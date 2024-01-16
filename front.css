@@ -62,19 +62,24 @@ p {
     line-height: 25px;
 }
 
-.search{
-    height: 50px;
+
+.search {
     width: 500px;
+}
+
+.search input{
+    height: 50px;
+    width: 100%;
     border-radius: 42px;
     background-color: #fbfbfc;
     border-color: #572af8;
-    font-size: 15px;
-    
+    font-size: 17px;
+    padding-left: 5%;
 }
 
-input::placeholder {
-    padding-left: 100px;
-}
+
+
+
 
 .button1{
     border-radius: 25px;
