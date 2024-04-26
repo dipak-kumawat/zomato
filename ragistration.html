@@ -1,167 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: sans-serif;
-        }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+      }
 
-        .container{
-            margin-left: 30px;
-            font-size: large;
-        }
+      .container {
+        margin-left: 30px;
+        font-size: large;
+      }
 
-        input{
-            width: 250px;
-            height: 25px;
-            border-radius: 5px;
-        }
+      input {
+        width: 250px;
+        height: 25px;
+        border-radius: 5px;
+      }
 
-        button{
-            width: 257px;
-            height: 35px;
-            font-size: 20px;
-            color: whitesmoke;
-            background-color: rgb(136, 79, 243);
-            border-radius: 5px;
-        }
-        
-        
-/*  loader */
+      button {
+        width: 257px;
+        height: 35px;
+        font-size: 20px;
+        color: whitesmoke;
+        background-color: rgb(136, 79, 243);
+        border-radius: 5px;
+      }
+      .form {
+        padding: 10px 20px 30px 10px;
+        border: solid rgb(136, 79, 243) 3px;
+        border-radius: 2%;
+        box-shadow: 10px 10px 8px #888888;
+      }
+      h1 {
+        padding-left: 25px;
+      }
 
-#loader{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #fff url("images/loader.gif") no-repeat center center;
-    z-index: 10000;
-}
+      /*  loader */
 
-.stop{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #fff url("images/loader.gif") no-repeat center center;
-    z-index: 10000;
-    display: none;
-}
+      #loader {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fff url("images/loader.gif") no-repeat center center;
+        z-index: 10000;
+      }
+
+      .stop {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fff url("images/loader.gif") no-repeat center center;
+        z-index: 10000;
+        display: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- <div id="loader" class="loading"></div> -->
 
-    <div id="loader" class="loading"></div>
-
-
-<form action="/home page/index.html">
-    <div class="form">
+    <form action="/home page/index.html">
+      <div class="form">
         <div class="ragistration">
-            <h1>Ragistration Form</h1>
+          <h1>Ragistration Form</h1>
         </div>
 
         <div class="container">
-           <span class="Name">
+          <span class="Name">
             <i class="fa-regular fa-user"></i>
-            <label for="name">First Name</label><br>
-            <input type="text" name="name" id="name" autocomplete="name" required>
-           </span><br> <br>
+            <label for="name">First Name</label><br />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="name"
+              required /> </span
+          ><br />
+          <br />
 
-           <span class="Lastname">
+          <span class="Lastname">
             <i class="fa-regular fa-user"></i>
-            <label for="last">Last Name</label><br>
-            <input type="text" name="last" id="last" autocomplete="last" required>
-           </span><br> <br>
+            <label for="last">Last Name</label><br />
+            <input
+              type="text"
+              name="last"
+              id="last"
+              autocomplete="last"
+              required /> </span
+          ><br />
+          <br />
 
-           <span class="Email">
+          <span class="Email">
             <i class="fa-regular fa-envelope"></i>
-            <label for="Email">Email</label><br>
-            <input type="email" name="email" id="email" autocomplete="email" required>
-           </span><br> <br> 
+            <label for="Email">Email</label><br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              required /> </span
+          ><br />
+          <br />
 
-            <span class="number">
+          <span class="number">
             <i class="fa-solid fa-phone"></i>
-            <label for="Number">Mobile Number</label><br>
-            <input type="number" name="Number" id="Number" autocomplete="Number" required>
-           </span><br> <br>
+            <label for="Number">Mobile Number</label><br />
+            <input
+              type="number"
+              name="Number"
+              id="Number"
+              autocomplete="Number"
+              required /> </span
+          ><br />
+          <br />
 
-           <span class="Password">
-            <i class="fa-solid fa-key"></i>            
-            <label for="Password">Password</label><br>
-            <input type="password">
-           </span><br> <br>
-
-           <span class="Password">
+          <span class="Password">
             <i class="fa-solid fa-key"></i>
-            <label for="Password">Confirm Password</label><br>
-            <input type="password">
-           </span><br> <br>
+            <label for="Password">Password</label><br />
+            <input type="password" /> </span
+          ><br />
+          <br />
 
-           <button type="submit">Sign In</button>
+          <span class="Password">
+            <i class="fa-solid fa-key"></i>
+            <label for="Password">Confirm Password</label><br />
+            <input type="password" /> </span
+          ><br />
+          <br />
 
+          <button type="submit">Sign In</button>
         </div>
-    </div>
-</form>
+      </div>
+    </form>
     <script>
-        function validateForm() {
-            // Get references to form fields
-            var name = document.getElementById("name");
-            var last = document.getElementById("last");
-            var email = document.getElementById("email");
-            var password = document.getElementById("password");
-            var number = document.getElementById("Number");
+      function validateForm() {
+        // Get references to form fields
+        var name = document.getElementById("name");
+        var last = document.getElementById("last");
+        var email = document.getElementById("email");
+        var password = document.getElementById("password");
+        var number = document.getElementById("Number");
 
-            // Regular expressions for validation
-            var namePattern = /^[a-zA-Z ]{6,}$/; // Alphabets with at least 6 characters
-            var passwordPattern = /^.{6,}$/; // At least 6 characters for password
-            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; // Email pattern
-            var numberPattern = /^\d{10}$/; // 10-digit number
+        // Regular expressions for validation
+        var namePattern = /^[a-zA-Z ]{6,}$/; // Alphabets with at least 6 characters
+        var passwordPattern = /^.{6,}$/; // At least 6 characters for password
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; // Email pattern
+        var numberPattern = /^\d{10}$/; // 10-digit number
 
-            // Validation checks
-            if (!namePattern.test(name.value)) {
-                alert("Name should contain alphabets and be at least 6 characters long.");
-                return false;
-            }
-
-            if (!namePattern.test(last.value)) {
-                alert("Last Name should contain alphabets and be at least 6 characters long.");
-                return false;
-            }
-
-            if (!emailPattern.test(email.value)) {
-                alert("Invalid email format. It should be in the form of name@domain.com.");
-                return false;
-            }
-
-            if (!passwordPattern.test(password.value)) {
-                alert("Password should be at least 6 characters long.");
-                return false;
-            }
-
-            if (!numberPattern.test(number.value)) {
-                alert("Mobile Number should contain exactly 10 digits.");
-                return false;
-            }
-
-            // If all checks pass, the form will submit
-            return true;
+        // Validation checks
+        if (!namePattern.test(name.value)) {
+          alert(
+            "Name should contain alphabets and be at least 6 characters long."
+          );
+          return false;
         }
 
+        if (!namePattern.test(last.value)) {
+          alert(
+            "Last Name should contain alphabets and be at least 6 characters long."
+          );
+          return false;
+        }
 
-var overlayloader = document.getElementById("loader");
-const overlayLoader = document.getElementById("loader");
+        if (!emailPattern.test(email.value)) {
+          alert(
+            "Invalid email format. It should be in the form of name@domain.com."
+          );
+          return false;
+        }
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    overlayLoader.style.display = "none";
-  }, 2000); // Hides the loader after 4 seconds (4000 milliseconds)
-});
+        if (!passwordPattern.test(password.value)) {
+          alert("Password should be at least 6 characters long.");
+          return false;
+        }
+
+        if (!numberPattern.test(number.value)) {
+          alert("Mobile Number should contain exactly 10 digits.");
+          return false;
+        }
+
+        // If all checks pass, the form will submit
+        return true;
+      }
+
+      var overlayloader = document.getElementById("loader");
+      const overlayLoader = document.getElementById("loader");
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          overlayLoader.style.display = "none";
+        }, 2000); // Hides the loader after 4 seconds (4000 milliseconds)
+      });
     </script>
-  
-</body>
+  </body>
 </html>

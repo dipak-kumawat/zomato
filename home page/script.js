@@ -5,7 +5,7 @@ const overlayLoader = document.getElementById("loader");
 window.addEventListener("load", () => {
   setTimeout(() => {
     overlayLoader.style.display = "none";
-  }, 2000); // Hides the loader after 4 seconds (4000 milliseconds)
+  }, 1000); // Hides the loader after 4 seconds (4000 milliseconds)
 });
 
 
