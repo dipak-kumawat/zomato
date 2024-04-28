@@ -16,13 +16,17 @@
 <body>
 
     <div id="loader" class="loading"></div>
+    <div class="" id="background">h
+
+        <h1>hello</h1>
+       </div>
 
    <header>
 
         <a href="#" class="logo"><i class="fa-solid fa-utensils"></i>FoodHub</a>
 
         <div class="navbar">
-            <a class="active" href="#home">home</a>
+            <a class="active" href="../index.html">home</a>
             <a href="#dishes">dishes</a>
             <a href="#about">about</a>
             <a href="#menu">menu</a>
@@ -612,20 +616,31 @@
             </div>
         </div>
 
-        <div class="inputBox">
-            <div class="input">
-                <span>your address</span>
-                <textarea name="" id="" placeholder="enter your address" cols="30" rows="10"></textarea>
-            </div>
-            <div class="input">
-                <span>your message</span>
-                <textarea name="" id="" placeholder="enter your address" cols="30" rows="10"></textarea>
-            </div>
-        </div>
 
-        <input type="submit" value="order now" class="btn input">
+    <div class="inputBox">
+        <div class="input">
+            <span>your address</span>
+            <textarea name="" id="" placeholder="enter your address" cols="30" rows="10"></textarea>
+        </div>
+        <div class="input">
+            <span>your message</span>
+            <textarea name="" id="" placeholder="enter your address" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    
+
+        <input type="button" value="order now" class="btn input" onclick="openPopup()">
     </form>
    </section>
+
+   <!-- order section ends -->
+
+   <!-- Order pop pup section start  -->
+   
+
+
+
+   <!-- Order pop pup section ends  -->
 
    <!-- footer section starts  -->
 
@@ -665,8 +680,12 @@
    <!-- loader part start  -->
 
 
-
-
+   <div class="popup" id="popup">
+    <img src="./images/404-tick.png" alt="" />
+    <h2>thank You!</h2>
+    <p>your order has been placed</p>
+    <button type="button" onclick="closePopup()">OK</button>
+</div>
 
 
 
