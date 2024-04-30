@@ -65,6 +65,91 @@
         z-index: 10000;
         display: none;
       }
+      
+.popup {
+    width: 400px;
+    background: #fff;
+    border: 1px solid #192a56;
+    box-shadow: 10px 10px 8px #888888;
+    border-radius: 6px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    z-index: 100%;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+  }
+
+  .open-popup {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    top: 50%;
+  }
+
+  .popup p{
+    font-size: 20px;
+  }
+
+  .popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+  }
+
+  .popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+
+    background: #6fd649;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5ox rgba(0, 0, 0, 00.2s);
+  }
+  .popup button:hover {
+    background: #6fd649;
+  }
+  .popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+  }
+
+  .popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    outline: nont;
+    border: 0;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5ox rgba(0, 0, 0, 00.2s);
+  }
     </style>
   </head>
   <body>
@@ -139,10 +224,19 @@
           ><br />
           <br />
 
-          <button type="submit">Sign In</button>
+          <button type="submit" onclick="openPopup()">Sign In</button>
         </div>
       </div>
     </form>
+
+    <div class="popup" id="popup">
+      <img src="./images/404-tick.png" alt="" />
+      <h2>thank You!</h2>
+      <p>your order has been placed</p>
+      <button type="button" onclick="closePopup()">OK</button>
+    </div>
+
+
     <script>
       function validateForm() {
         // Get references to form fields
@@ -202,6 +296,22 @@
           overlayLoader.style.display = "none";
         }, 2000); // Hides the loader after 4 seconds (4000 milliseconds)
       });
+
+
+      
+let popup = document.getElementById("popup");
+let background  = document.getElementById("background");
+
+function openPopup() {
+  popup.classList.add("open-popup");
+  background.classList.add("open-popup");
+}
+
+function closePopup() {
+  popup.classList.remove("open-popup");
+  background.classList.remove("open-popup");
+}
+
     </script>
   </body>
 </html>
