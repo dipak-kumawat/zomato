@@ -7,6 +7,7 @@
   --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
+
 * {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -51,6 +52,7 @@ section:nth-child(even) {
 
 .btn {
   margin-top: 1rem;
+  margin-left: 10px;
   display: inline-block;
   font-size: 1.7rem;
   color: #fff;
@@ -294,9 +296,15 @@ header .icons #menu-bars {
 .dishes .box-container .box span {
   color: var(--green);
   font-weight: bolder;
+  width: 5rem;
   margin-right: 1rem;
   font-size: 2.5rem;
 }
+
+.inline {
+  display: inline-block;
+  margin-left: 10px;
+ }
 
 /* about section start  */
 
@@ -535,13 +543,7 @@ header .icons #menu-bars {
   margin-top: 0;
 }
 
-
-
-
-
-
-
-.background{
+.background {
   width: 100%;
   height: 100vh;
   background-color: #000000;
@@ -551,47 +553,47 @@ header .icons #menu-bars {
 }
 
 .popup {
-    width: 400px;
-    background: #fff;
-    border: 1px solid #192a56;
-    box-shadow: 10px 10px 8px #888888;
-    border-radius: 6px;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-    z-index: 100%;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-  }
+  width: 400px;
+  background: #fff;
+  border: 1px solid #192a56;
+  box-shadow: 10px 10px 8px #888888;
+  border-radius: 6px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  z-index: 1002;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
 
-  .open-popup {
-    transform: translate(-50%, -50%) scale(1);
-    visibility: visible;
-    top: 50%;
-  }
+.open-popup {
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  top: 50%;
+}
 
-  .popup p{
-    font-size: 20px;
-  }
+.popup p {
+  font-size: 20px;
+}
 
-  .popup img {
-    width: 100px;
-    margin-top: -50px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
+.popup img {
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-  .popup h2 {
-    font-size: 38px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-  }
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
 
-  .popup button {
+/* .popup button {
     width: 100%;
     margin-top: 50px;
     padding: 10px 0;
@@ -607,44 +609,26 @@ header .icons #menu-bars {
   }
   .popup button:hover {
     background: #6fd649;
-  }
-  .popup img {
-    width: 100px;
-    margin-top: -50px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
+  } */
+.popup img {
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-  .popup h2 {
-    font-size: 38px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-  }
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
 
-  .popup button {
-    width: 100%;
-    margin-top: 50px;
-    padding: 10px 0;
-    background: #6fd649;
-    color: #fff;
-    outline: nont;
-    border: 0;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow: 0 5px 5ox rgba(0, 0, 0, 00.2s);
-  }
+.popup button {
+  width: 100%;
+}
 
+/* footer css  */
 
-
-
-
-
-
-
- /* footer css  */
-
- 
 .footer .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
