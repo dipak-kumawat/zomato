@@ -68,10 +68,8 @@ var swiper = new Swiper(".review-slider", {
   },
 });
 
-
-
 let popup = document.getElementById("popup");
-let background  = document.getElementById("background");
+let background = document.getElementById("background");
 
 function openPopup() {
   popup.classList.add("open-popup");
@@ -85,3 +83,13 @@ function closePopup() {
 
 
 
+let addToCart = document.querySelectorAll("a.cart");
+
+addToCart.forEach(anchor => {
+  anchor.addEventListener("click", () => {
+    anchor.textContent = "added";
+    setTimeout(() => {
+      anchor.textContent = "add to cart";
+    }, 5000); // Reset button text after 2 seconds
+  });
+});
